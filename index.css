@@ -1,0 +1,302 @@
+@font-face {
+    font-family: 'supercell';
+    src: url('/supercell-magic-webfont.woff');
+}
+
+:root {
+    ---supercell: 'supercell', sans-serif;
+    --bg: rgba(0, 0, 0, 0.229);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+    list-style: none;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    width: 100% !important;
+    height: 100%;
+    background: var(--bg);
+    font-family: var(---supercell);
+}
+
+.header_content {
+    width: 100%;
+    height: 84vh;
+    background-image: url('/assets/hero_bg_clashofclans.webp');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_nav {
+    align-items: center;
+    padding: 10px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    /* Reducido a 80px para que se ajuste mejor en dispositivos móviles */
+    color: transparent;
+}
+
+.container_nav img {
+    width: 4rem;
+    height: 3.4rem;
+}
+
+.container_img_header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_img_header img {
+    width: 38%;
+    height: auto;
+    /* Ajusta la altura automáticamente para mantener la proporción */
+    display: block;
+    /* Asegura que la imagen sea tratada como un bloque */
+    margin: auto;
+    /* Centra horizontalmente */
+    max-width: 100%;
+    /* Asegura que la imagen no sobrepase el contenedor */
+    max-height: 100%;
+    /* Asegura que la imagen no sobrepase el contenedor */
+}
+
+.container_ul_to_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 80px;
+    /* Reducido a 80px para que se ajuste mejor en dispositivos móviles */
+    color: transparent;
+}
+
+.container_ul_to_nav i {
+    font-size: 24px;
+    color: transparent;
+    cursor: pointer;
+}
+
+.container_li_to_ul_nav {
+    list-style-type: none;
+}
+
+.li_nav {
+    padding: 1rem;
+    color: transparent;
+    transition: color 0.3s, background-color 0.3s;
+    /* Transición suave para el color de texto y el fondo */
+    transform: translateX(130px);
+    transition: transform 0.7s ease;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    font-family: var(---supercell);
+}
+
+.nosotros_section_title {
+    font-size: xx-large;
+    letter-spacing: -0.12rem;
+    font-family: var(---supercell);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main_container {
+    background-color:none;
+}
+
+.data_clan {
+    font-family: var(---supercell);
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+}
+
+.data_clan span {
+    font-family: var(---supercell);
+}
+
+/*RULES*/
+
+.container_rules {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container_rules ul{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.container_rules ul li{
+    padding: .5rem 5px ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: ease-in 1s;
+}
+
+.container_rules ul li:hover{
+    background-color: antiquewhite;
+    color: white;
+    border-radius: 10px;
+}
+h2 {
+    font-family: var(---supercell);
+    font-size: xx-large;
+    color: antiquewhite;
+}
+
+li,span {
+    font-family: var(---supercell);
+    color: antiquewhite;
+    transition: ease-in 2s;
+}
+
+span:hover{
+    color: red;
+}
+
+@media screen and (max-width: 1000px) {
+    .container_ul_to_nav ul {
+        display: none;
+        /* Oculta la lista en dispositivos móviles */
+        position: fixed;
+        top: 80px;
+        right: 0;
+        justify-content: center;
+        gap: 1.5rem;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .li_nav:hover {
+        color: antiquewhite;
+        background: white;
+        transform: translateX(0);
+        /* Al pasar el cursor sobre el elemento, mueve desde la izquierda hacia la derecha */
+    }
+
+    .img_war_remo {
+        display: flex;
+        align-items: center;
+    }
+
+    .img_war_remo img {
+        width: 24px;
+        height: 30%;
+    }
+
+    .container_ul_to_nav ul.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container_li_to_ul_nav {
+        margin: 5px 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #menu{
+        display: none;
+    }
+    .container_nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+    .container_data_clan{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .data_clan{
+        width: 100%;
+        display: flex;
+        height: 100%;
+    }
+    .container_nav{
+        display: flex;
+        justify-content: space-between;
+        color: white;
+    }
+    .container_ul_to_nav{
+        background: none;
+        margin: 0px 30px;
+    }
+    .li_nav{
+        background: none;
+        color: antiquewhite;
+        transform: none;
+    }
+    .container_li_to_ul_nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main_container{
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        background: none;
+        align-items: center;
+    }
+    .nosotros_section{
+        display: flex;
+        flex-direction: column;
+        max-width: 60%;
+        background: none;
+        align-items: center;
+    }
+    .container_nosotros{
+        justify-content: center;
+        
+    }
+    .container_nosotros div{
+        max-width: 65%;
+    }
+    .container_img_header {
+        height: auto;
+    }
+    .container_rules{
+        display: flex;
+        align-items: center;
+    }
+    .container_rules div{
+        max-width: 60%;
+    }
+    .img_war_remo{
+        display: none;
+    }
+    .li_nav i{
+        display: none;
+    }
+}
